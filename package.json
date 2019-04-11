@@ -1,0 +1,17 @@
+{
+  "name": "Docket",
+  "version": "1.0.0",
+  "description": "A small morkdown to html editor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "James Henderson",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.1.4"
+  },
+  "dependencies": {
+    "remarkable": "^1.7.1"
+  }
+}

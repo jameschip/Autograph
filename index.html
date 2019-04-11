@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="sty/divs.css">
+    <link rel="stylesheet" type="text/css" href="sty/textarea.css">
+    <link rel="stylesheet" type="text/css" href="sty/theme.css">
+    <script src="src/docket.js"></script>
+    <script src="src/theme.js"></script>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="editor">
+            <textarea id="input-area"></textarea>
+        </div>
+        <div id="render">
+        </div>
+    </div>
+    <script>
+        let theme = new Theme();
+        theme.install(document.body);
+        theme.start();
+        document.getElementById("input-area").focus();
+        let mdown = new Docket();
+    </script>
+</body>
+
+</html>
