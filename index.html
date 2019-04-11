@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="sty/textarea.css">
     <link rel="stylesheet" type="text/css" href="sty/theme.css">
     <script src="src/docket.js"></script>
+    <script src="src/fileio.js"></script>
     <script src="src/theme.js"></script>
 </head>
 
@@ -22,7 +23,8 @@
         theme.install(document.body);
         theme.start();
         document.getElementById("input-area").focus();
-        let mdown = new Docket();
+        let docket = new Docket();
+        docket.init();
     </script>
 </body>
 

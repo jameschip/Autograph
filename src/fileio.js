@@ -14,7 +14,7 @@ function readFile(f_name) {
     return "";
 }
 
-function writeFile(f_name, content) {
+function saveFile(f_name, content) {
     try {
         fs.writeFileSync(f_name, content);
     } catch (err) {
