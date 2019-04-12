@@ -1,1 +1,3 @@
-# Docket this is a test
+# Docket
+
+A small markdown editor.

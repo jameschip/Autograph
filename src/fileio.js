@@ -22,6 +22,7 @@ function readFile(f_name) {
 function saveFile(f_name, content) {
     try {
         fs.writeFileSync(f_name, content);
+        localStorage.setItem("docket_file", f_name);
     } catch (err) {
         console.log('could not write to file');
     }
@@ -35,4 +36,13 @@ function openFile() {
         let content = readFile(f_name[0]);
         docket.setContent(content);
     });
+}
+
+function saveFileAs() {
+    dialog.showSaveDialog((f_name) => {
+        if (f_name === undefined) {
+            dialog.showErrorBox("Could not save file!")
+        }
+        saveFile(f_name, docket.getContent());
+    }) 
 }

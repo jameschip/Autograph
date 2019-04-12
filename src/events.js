@@ -1,3 +1,4 @@
+
 document.onkeydown = function keyDown(e) {
 
     if (e.keyCode === 9) {
@@ -11,7 +12,11 @@ document.onkeydown = function keyDown(e) {
                 openFile();
                 break;
             case 83:
-                console.log("save");
+                if (e.shiftKey) {
+                    saveFileAs();
+                } else {
+                    saveFile(localStorage.getItem("docket_file"), docket.getContent());
+                }
                 break;
         }
 

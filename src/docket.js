@@ -10,7 +10,7 @@ class Docket {
             clearTimeout(this.updateTimer);
             this.updateTimer = setTimeout(() => {
                 document.getElementById("render").innerHTML = this.md.render(document.getElementById("input-area").value);
-                saveFile(localStorage.getItem("docket_file"), document.getElementById("input-area").value);
+                // saveFile(localStorage.getItem("docket_file"), document.getElementById("input-area").value);
             }, 200);
         };
     }
@@ -19,6 +19,10 @@ class Docket {
     {
         document.getElementById("input-area").value = content;
         document.getElementById("render").innerHTML = this.md.render(document.getElementById("input-area").value);
+    }
+
+    getContent() {
+        return document.getElementById("input-area").value;
     }
     
 }
