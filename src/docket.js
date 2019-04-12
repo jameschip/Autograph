@@ -20,5 +20,11 @@ class Docket {
         document.getElementById("input-area").value = content;
         document.getElementById("render").innerHTML = this.md.render(document.getElementById("input-area").value);
     }
+
+    setContent(content)
+    {
+        document.getElementById("input-area").value = content;
+        document.getElementById("render").innerHTML = this.md.render(document.getElementById("input-area").value);
+    }
     
 }
