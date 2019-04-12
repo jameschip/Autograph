@@ -41,4 +41,24 @@ class Docket {
         } 
     }
 
+    gotoPrevHeading() {
+        let start = this.input.selectionStart;
+        let content = this.input.value;
+        let s1 = content.substring(0, start);
+        var regex = /(#{1,} .*)/g
+        var matches = [];
+        var match;
+        do {
+            match = regex.exec(s1);
+            if (match)
+                matches.push(match);
+        } while (match);
+        console.log(matches,length)
+        if (matches.length > 0) {
+            console,console.log("this");
+            this.input.selectionStart = matches[matches.length - 1].index;
+            this.input.selectionEnd = matches[matches.length - 1].index;
+        } 
+    }
+
 }

@@ -6,7 +6,7 @@ document.onkeydown = function keyDown(e) {
     }
 
     if (e.metaKey || e.ctrlKey) {
-        console.log("key code  " + e.keyCode )
+        // console.log("key code  " + e.keyCode )
         switch (e.keyCode) {
             case 79:
                 openFile();
@@ -29,6 +29,9 @@ document.onkeydown = function keyDown(e) {
                 break;
                 case 190: 
                     docket.gotoNextHeading();
+                    break;
+                case 188:
+                    docket.gotoPrevHeading();
         }
 
     }
