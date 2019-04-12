@@ -27,6 +27,8 @@ document.onkeydown = function keyDown(e) {
                     }
                 }
                 break;
+                case 190: 
+                    docket.gotoNextHeading();
         }
 
     }
