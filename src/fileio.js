@@ -2,6 +2,10 @@ const fs = require('fs');
 const { dialog } = require('electron').remote 
 
 function readFile(f_name) {
+    if (!fs.existsSync(f_name)) {   // File does not exist so dont open
+        localStorage.setItem("docket_file", "");
+        return "";
+    } 
     let text;
     try {
         text = fs.readFileSync(f_name)
