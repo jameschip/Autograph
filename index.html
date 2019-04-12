@@ -25,7 +25,7 @@
         theme.start();
         document.getElementById("input-area").focus();
         let docket = new Docket();
-        docket.init();
+        docket.setContent(readFile(localStorage.getItem("docket_file")));
     </script>
 </body>
 
