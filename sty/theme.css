@@ -3,3 +3,9 @@ h1 {color: var(--f_high) !important}
 h2 {color: var(--f_high) !important}
 h3 {color: var(--f_high) !important}
 h4 {color: var(--f_high) !important}
+
+blockquote {
+    border-left: 5px solid var(--f_med);
+    margin-left: 1.5em;
+    padding-left: 0.5em;
+}
