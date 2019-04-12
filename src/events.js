@@ -15,7 +15,16 @@ document.onkeydown = function keyDown(e) {
                 if (e.shiftKey) {
                     saveFileAs();
                 } else {
-                    saveFile(localStorage.getItem("docket_file"), docket.getContent());
+                    let f_name = localStorage.getItem("docket_file");
+                    if (f_name === undefined || f_name === "") {    // No file set
+                        saveFileAs();
+                        return;
+                    } else if (!fs.existsSync(f_name)) {   // File we are editing doth not exist
+                        saveFileAs();
+                        
+                    } else {
+                        saveFile(f_name, docket.getContent());
+                    }
                 }
                 break;
         }
