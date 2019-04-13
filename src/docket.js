@@ -38,13 +38,14 @@ class Docket {
             let pos = (s1.length - s2.length) + start + match.index;
             this.input.selectionStart = pos;
             this.input.selectionEnd = pos;
+            this.input.blur();
+            this.input.focus();
         } 
     }
 
     gotoPrevHeading() {
         let start = this.input.selectionStart;
-        let content = this.input.value;
-        let s1 = content.substring(0, start);
+        let s1 = this.input.value.substring(0, start);
         var regex = /(#{1,} .*)/g
         var matches = [];
         var match;
@@ -55,9 +56,10 @@ class Docket {
         } while (match);
         console.log(matches,length)
         if (matches.length > 0) {
-            console,console.log("this");
             this.input.selectionStart = matches[matches.length - 1].index;
             this.input.selectionEnd = matches[matches.length - 1].index;
+            this.input.blur();
+            this.input.focus();
         } 
     }
 
