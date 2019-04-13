@@ -2,6 +2,9 @@
 
 A small markdown editor that is keyboard driven. If follows githubs markdown style.
 
+![](https://github.com/jameschip/Autograph/screenshot.png "Screen shot")
+
+
 ### Keyboard control
 
 meta+o -> Open.
@@ -18,7 +21,7 @@ Uses the [Themes](https://github.com/hundredrabbits/Themes) engine by [Hundred r
 
 Clone with 
 ```
-git clone https://github.com/b1gch1p/Docket.git
+git clone https://github.com/jameschip/Autograph.git
 ```
 Then do
 ```
