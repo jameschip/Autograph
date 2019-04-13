@@ -2,7 +2,7 @@
 
 A small markdown editor that is keyboard driven. If follows githubs markdown style.
 
-![](https://github.com/jameschip/Autograph/screenshot.png "Screen shot")
+![](https://raw.githubusercontent.com/jameschip/Autograph/master/screenshot.png "Screen shot")
 
 
 ### Keyboard control
