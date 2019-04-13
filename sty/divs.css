@@ -15,31 +15,53 @@ html {
     background: transparent; /* make scrollbar transparent */
 }
 
+pre,div wordwrap { 
+    white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+ }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 div {
     color: var(--f_med) !important;
+    word-wrap: break-word;
 }
 
 #parent {
-    display: flex;
     height: 100%;
     width:100%;
     margin: 0px;
     padding: 0px;
 }
 
+#top-bar {
+    flex: 0 1 auto;
+    padding: 5px;
+    border-bottom: 2px solid #444444;
+    height: 20 px;
+}
+
 #editor {
     width: 50%;
-    height: 100%;
+    height: calc(100% - 20px);
     padding: 0px;
     margin: 0px;
     display: block;
+    float: left;
 }
 
 #render {
-    width: 50%;
-    height:100%;
+    width: auto;
+    height:calc(100% - 20px);
     flex: 1;
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
     overflow: scroll;
 }
+
