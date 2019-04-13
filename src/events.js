@@ -15,23 +15,23 @@ document.onkeydown = function keyDown(e) {
                 if (e.shiftKey) {
                     saveFileAs();
                 } else {
-                    let f_name = localStorage.getItem("docket_file");
+                    let f_name = localStorage.getItem(aut_file);
                     if (f_name === undefined || f_name === "") {    // No file set
                         saveFileAs();
                         return;
                     } else if (!fs.existsSync(f_name)) {   // File we are editing doth not exist
                         saveFileAs();
-                        
+
                     } else {
-                        saveFile(f_name, docket.getContent());
+                        saveFile(f_name, autograph.getContent());
                     }
                 }
                 break;
-                case 190: 
-                    docket.gotoNextHeading();
-                    break;
-                case 188:
-                    docket.gotoPrevHeading();
+            case 190:
+                autograph.gotoNextHeading();
+                break;
+            case 188:
+                autograph.gotoPrevHeading();
         }
 
     }

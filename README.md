@@ -1,6 +1,6 @@
-# Docket
+# Autograph
 
-A small markdown editor that is keyboard driven.
+A small markdown editor that is keyboard driven. If follows githubs markdown style.
 
 ### Keyboard control
 

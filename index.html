@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="sty/divs.css">
     <link rel="stylesheet" type="text/css" href="sty/textarea.css">
     <link rel="stylesheet" type="text/css" href="sty/theme.css">
-    <script src="src/docket.js"></script>
+    <script src="src/autograph.js"></script>
     <script src="src/fileio.js"></script>
     <script src="src/theme.js"></script>
     <script src="src/events.js"></script>
@@ -20,12 +20,13 @@
         </div>
     </div>
     <script>
+        let aut_file = "aut_file";
         let theme = new Theme();
         theme.install(document.body);
         theme.start();
         document.getElementById("input-area").focus();
-        let docket = new Docket();
-        docket.setContent(readFile(localStorage.getItem("docket_file")));
+        let autograph = new Autograph();
+        autograph.setContent(readFile(localStorage.getItem(aut_file)));
     </script>
 </body>
 

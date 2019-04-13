@@ -3,13 +3,13 @@ const { dialog } = require('electron').remote
 
 function readFile(f_name) {
     if (!fs.existsSync(f_name)) {   // File does not exist so dont open
-        localStorage.setItem("docket_file", "");
+        localStorage.setItem(aut_file, "");
         return "";
     } 
     let text;
     try {
         text = fs.readFileSync(f_name)
-        localStorage.setItem("docket_file", f_name);
+        localStorage.setItem(aut_file, f_name);
         return text;
     } catch (err)
     {
@@ -22,7 +22,7 @@ function readFile(f_name) {
 function saveFile(f_name, content) {
     try {
         fs.writeFileSync(f_name, content);
-        localStorage.setItem("docket_file", f_name);
+        localStorage.setItem(aut_file, f_name);
     } catch (err) {
         console.log('could not write to file');
     }
@@ -34,7 +34,7 @@ function openFile() {
         if (f_name === undefined)
             return;
         let content = readFile(f_name[0]);
-        docket.setContent(content);
+        autograph.setContent(content);
     });
 }
 
@@ -43,6 +43,6 @@ function saveFileAs() {
         if (f_name === undefined) {
             dialog.showErrorBox("Could not save file!")
         }
-        saveFile(f_name, docket.getContent());
+        saveFile(f_name, autograph.getContent());
     }) 
 }
