@@ -7,7 +7,7 @@ class Autograph {
         this.input = document.getElementById("input-area");
         this.render = document.getElementById("render");
         this.topbar = document.getElementById("top-bar");
-        this.topbar.innerHTML = "> " + localStorage.getItem(aut_file);
+        // this.topbar.innerHTML = "> " + localStorage.getItem(aut_file);
         
         this.md = new Remarkable({
             breaks: true,
@@ -21,9 +21,12 @@ class Autograph {
         };
     }
 
+    
+
     setContent(content) {
         this.input.value = content;
         this.render.innerHTML = this.md.render(document.getElementById("input-area").value);
+        this.topbar.innerHTML = "> " + localStorage.getItem(aut_file);
     }
 
     getContent() {

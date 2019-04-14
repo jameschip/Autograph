@@ -58,7 +58,7 @@ div {
 #top-bar {
     flex: 0 1 auto;
     padding: 5px;
-    border-bottom: 2px solid #444444;
+    border-bottom: 2px solid var(--b_med);
     height: 20 px;
     font-size: 1em !important;
 }
