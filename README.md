@@ -7,11 +7,11 @@ A small markdown editor that is keyboard driven. If follows githubs markdown sty
 
 ### Keyboard control
 
-meta+o -> Open.
-meta+s -> Save.
-meta+S -> Save as.
-meta+> -> Cursor to next heading.
-meta+< -> Cursor to previous heading.
+* meta+o -> Open.
+* meta+s -> Save.
+* meta+S -> Save as.
+* meta+> -> Cursor to next heading.
+* meta+< -> Cursor to previous heading.
 
 ### Themes
 
