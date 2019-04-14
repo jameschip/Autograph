@@ -23,7 +23,12 @@ h4 {
 }
 
 blockquote {
-    border-left: 1px solid var(--f_med);
+    border-left: 2px solid var(--f_med);
     margin-left: 1.5em;
     padding-left: 0.5em;
 }
+
+a:link {
+    text-decoration: none;
+    color: var(--f_high);
+  }
