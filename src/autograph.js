@@ -8,6 +8,7 @@ class Autograph {
         this.render = document.getElementById("render");
         this.topbar = document.getElementById("top-bar");
         this.topbar.innerHTML = "> " + localStorage.getItem(aut_file);
+        
         this.md = new Remarkable({
             breaks: true,
             typographer: true

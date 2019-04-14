@@ -1,27 +1,42 @@
-
-html,body { 
-    height: 100%; 
-    margin: 0px; 
-    padding: 0px; 
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
     background: var(--background) !important;
+    overflow: hidden;
 }
 
-html {
-    overflow: none;
+@import url('https://rsms.me/inter/inter.css');
+div, textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+}
+
+@supports (font-variation-settings: normal) {
+    div, textarea {
+        font-family: 'Inter var', sans-serif;
+        font-size: 12px;
+    }
 }
 
 ::-webkit-scrollbar {
     width: 0px;
-    background: transparent; /* make scrollbar transparent */
+    background: transparent;
+    /* make scrollbar transparent */
 }
 
-pre,div wordwrap { 
-    white-space: pre-wrap;      /* CSS3 */   
-    white-space: -moz-pre-wrap; /* Firefox */    
-    white-space: -pre-wrap;     /* Opera <7 */   
-    white-space: -o-pre-wrap;   /* Opera 7 */    
-    word-wrap: break-word;      /* IE */
- }
+pre, div wordwrap {
+    white-space: pre-wrap;
+    /* CSS3 */
+    white-space: -moz-pre-wrap;
+    /* Firefox */
+    white-space: -pre-wrap;
+    /* Opera <7 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* IE */
+}
 
 img {
     max-width: 100%;
@@ -35,7 +50,7 @@ div {
 
 #parent {
     height: 100%;
-    width:100%;
+    width: 100%;
     margin: 0px;
     padding: 0px;
 }
@@ -45,6 +60,7 @@ div {
     padding: 5px;
     border-bottom: 2px solid #444444;
     height: 20 px;
+    font-size: 1em !important;
 }
 
 #editor {
@@ -54,14 +70,15 @@ div {
     margin: 0px;
     display: block;
     float: left;
+    font-size: 1em;
 }
 
 #render {
     width: auto;
-    height:calc(100% - 20px);
+    height: calc(100% - 20px);
     flex: 1;
     padding: 10px;
     margin: 0px;
     overflow: scroll;
+    font-size: 1em !important;
 }
-
