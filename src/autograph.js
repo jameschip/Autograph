@@ -6,8 +6,8 @@ class Autograph {
         this.updateTimer;
         this.input = document.getElementById("input-area");
         this.render = document.getElementById("render");
-        this.topbar = document.getElementById("top-bar");
-        // this.topbar.innerHTML = "> " + localStorage.getItem(aut_file);
+        this.filebar = document.getElementById("fname");
+        this.statbar = document.getElementById("stat");
         
         this.md = new Remarkable({
             breaks: true,
@@ -17,6 +17,7 @@ class Autograph {
             clearTimeout(this.updateTimer);
             this.updateTimer = setTimeout(() => {
                 this.render.innerHTML = this.md.render(this.input.value);
+                this.fillTopBar();
             }, 200);
         };
     }
@@ -26,7 +27,13 @@ class Autograph {
     setContent(content) {
         this.input.value = content;
         this.render.innerHTML = this.md.render(document.getElementById("input-area").value);
-        this.topbar.innerHTML = "> " + localStorage.getItem(aut_file);
+        this.fillTopBar();
+    }
+
+    fillTopBar() {
+        this.filebar.innerHTML = "> " + localStorage.getItem(aut_file);
+        var words = this.input.value.match(/\b\w+\b/g);
+        this.statbar.innerHTML = "c:" + this.input.value.length + " w:" + words.length;
     }
 
     getContent() {

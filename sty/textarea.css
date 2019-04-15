@@ -1,10 +1,10 @@
 textarea:focus, input:focus{
     outline: none;
-    background: var(--background) !important;
-    color: var(--f_med) !important;
 }
 
 #input-area {
+    background: var(--background) !important;
+    color: var(--f_med) !important;
     width: 100%;
     height: 100%;
     -moz-box-sizing: border-box;

@@ -44,8 +44,11 @@ img {
 }
 
 div {
+    background-color: var(--background);
     color: var(--f_med) !important;
     word-wrap: break-word;
+    margin:  0;
+    padding: 0;
 }
 
 #parent {
@@ -56,11 +59,22 @@ div {
 }
 
 #top-bar {
-    flex: 0 1 auto;
+    display: flex;
+    flex-direction: row;
     padding: 5px;
     border-bottom: 2px solid var(--b_med);
     height: 20 px;
-    font-size: 1em !important;
+}
+
+#fname {
+    flex-grow: 9;
+    float: left;
+}
+
+#stat {
+    flex-grow: 1;
+    float: right;
+    text-align: right;
 }
 
 #editor {
