@@ -3,32 +3,33 @@ body {
 }
 
 h1 {
-    color: var(--f_high) !important;
+    color: var(--f_med) !important;
     font-size: 5em !important;
 }
 
 h2 {
-    color: var(--f_high) !important;
+    color: var(--f_med) !important;
     font-size: 4vw !important;
 }
 
 h3 {
-    color: var(--f_high) !important;
+    color: var(--f_med) !important;
     font-size: 3vw !important;
 }
 
 h4 {
-    color: var(--f_high) !important;
+    color: var(--f_med) !important;
     font-size: 2vw !important;
 }
 
 blockquote {
-    border-left: 2px solid var(--f_med);
+    
+    border-left: 2px solid var(--f_low);
     margin-left: 1.5em;
     padding-left: 0.5em;
 }
 
 a:link {
     text-decoration: none;
-    color: var(--f_high);
+    color: var(--f_med);
   }

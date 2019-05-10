@@ -45,7 +45,7 @@ img {
 
 div {
     background-color: var(--background);
-    color: var(--f_med) !important;
+    color: var(--f_high) !important;
     word-wrap: break-word;
     margin:  0;
     padding: 0;
