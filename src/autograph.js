@@ -33,7 +33,11 @@ class Autograph {
     fillTopBar() {
         this.filebar.innerHTML = "> " + localStorage.getItem(aut_file);
         var words = this.input.value.match(/\b\w+\b/g);
-        this.statbar.innerHTML = "c:" + this.input.value.length + " w:" + words.length;
+        if (this.input.value == '') {
+            this.statbar.innerHTML = "c:" + 0 + " w:" + 0;
+        } else {
+            this.statbar.innerHTML = "c:" + this.input.value.length + " w:" + words.length;
+        }
     }
 
     getContent() {
