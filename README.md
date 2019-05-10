@@ -2,12 +2,13 @@
 
 A small markdown editor that is keyboard driven. If follows githubs markdown style.
 
-![](https://raw.githubusercontent.com/jameschip/Autograph/master/screenshot.png "Screen shot")
+![Screen shot of editor in action](https://raw.githubusercontent.com/jameschip/Autograph/master/screenshot.png "Screen shot")
 
 
 ### Keyboard control
 
 * meta+o -> Open.
+* meta+n -> New file.
 * meta+s -> Save.
 * meta+S -> Save as.
 * meta+> -> Cursor to next heading.
