@@ -27,6 +27,9 @@ document.onkeydown = function keyDown(e) {
                     }
                 }
                 break;
+            case 78:
+                autograph.newEmptyEditor();
+                break;
             case 190:
                 autograph.gotoNextHeading();
                 break;

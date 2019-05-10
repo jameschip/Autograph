@@ -80,4 +80,9 @@ class Autograph {
         } 
     }
 
+    newEmptyEditor() {
+        localStorage.setItem(aut_file, "");
+        this.setContent(""); 
+    }
+
 }
