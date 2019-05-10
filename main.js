@@ -22,6 +22,9 @@ function createWindow() {
         win = null
     })
 
+    win.webContents.on('will-navigate', handleRedirect)
+    win.webContents.on('new-window', handleRedirect)
+
 }
 
 // This method will be called when Electron has finished
@@ -45,4 +48,14 @@ app.on('activate', () => {
         createWindow()
     }
 })
+
+
+
+var handleRedirect = (e, url) => {
+    if(url != win.webContents.getURL()) {
+      e.preventDefault()
+      require('electron').shell.openExternal(url)
+    }
+  }
+  
 
