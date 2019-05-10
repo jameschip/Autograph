@@ -22,7 +22,16 @@ class Autograph {
         };
     }
 
-    
+    toggleDisplay() {
+        if (this.render.style.display === "block") {
+            this.render.style.display = "none";
+            document.getElementById("editor").style.width = "100%";
+        }
+        else {
+            this.render.style.display = "block";
+            document.getElementById("editor").style.width = "50%";
+        } 
+    }
 
     setContent(content) {
         this.input.value = content;

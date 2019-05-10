@@ -30,6 +30,9 @@ document.onkeydown = function keyDown(e) {
             case 78:
                 autograph.newEmptyEditor();
                 break;
+            case 68:
+                autograph.toggleDisplay();
+                break;
             case 190:
                 autograph.gotoNextHeading();
                 break;

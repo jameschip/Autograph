@@ -95,4 +95,5 @@ div {
     margin: 0px;
     overflow: scroll;
     font-size: 1em !important;
+    display: block;
 }
