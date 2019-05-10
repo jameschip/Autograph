@@ -1,7 +1,7 @@
 {
   "name": "Autograph",
   "version": "1.0.0",
-  "description": "A small morkdown to html editor",
+  "description": "A small markdown to html editor",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
