@@ -15,20 +15,11 @@ document.onkeydown = function keyDown(e) {
                 if (e.shiftKey) {
                     saveFileAs();
                 } else {
-                    let f_name = localStorage.getItem(aut_file);
-                    if (f_name === undefined || f_name === "") {    // No file set
-                        saveFileAs();
-                        return;
-                    } else if (!fs.existsSync(f_name)) {   // File we are editing doth not exist
-                        saveFileAs();
-
-                    } else {
-                        saveFile(f_name, autograph.getContent());
-                    }
+                    doSaveFile()
                 }
                 break;
             case 78:
-                autograph.newEmptyEditor();
+                newFile();
                 break;
             case 68:
                 autograph.toggleDisplay();
