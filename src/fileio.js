@@ -41,16 +41,18 @@ function saveFile(f_name, content) {
 }
 
 function openFile() {
-    dialog.showOpenDialog({
-        filters: [
-            { name: 'All Files', extensions: ['*'] },
-            { name: 'Markdown', extensions: ['md', 'markdown'] }]
-    }, (f_name) => {
-        if (f_name === undefined)
-            return;
-        let content = readFile(f_name[0]);
-        autograph.setContent(content);
-    });
+    if (dealWithEdits()) {
+        dialog.showOpenDialog({
+            filters: [
+                { name: 'All Files', extensions: ['*'] },
+                { name: 'Markdown', extensions: ['md', 'markdown'] }]
+        }, (f_name) => {
+            if (f_name === undefined)
+                return;
+            let content = readFile(f_name[0]);
+            autograph.setContent(content);
+        });
+    }
 }
 
 function saveFileAs() {
