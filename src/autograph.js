@@ -7,7 +7,7 @@ class Autograph {
         this.updateTimer;
         this.content_check = "";
         this.is_edit = false;
-        
+
         this.input = document.getElementById("input-area");
         this.render = document.getElementById("render");
         this.filebar = document.getElementById("fname");
@@ -24,8 +24,8 @@ class Autograph {
                 this.render.innerHTML = this.md.render(this.input.value);
                 this.fillTopBar();
                 if (this.is_edit == false && this.input.value !== this.content_check) {
-                    this.is_edit = true
-                    console.log("is edited")
+                    this.is_edit = true;
+                    this.filebar.style.fontWeight = "bold";
                 }
             }, 200);
         };
@@ -45,7 +45,7 @@ class Autograph {
     }
 
     setContent(content) {
-        this.is_edit = false;
+        this.clearEditFlag();
         this.content_check = content;
         this.input.value = content;
         this.render.innerHTML = this.md.render(document.getElementById("input-area").value);
@@ -110,6 +110,7 @@ class Autograph {
     clearEditFlag() {
         this.is_edit = false;
         this.content_check = this.input.value;
+        this.filebar.style.fontWeight = "normal";
         this.fillTopBar();
     }
 
