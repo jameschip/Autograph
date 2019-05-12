@@ -25,7 +25,7 @@
     </div>
     <script>
         let aut_file = "aut_file";
-        let theme = new Theme();
+        let theme = new Theme({ background: '#000000', f_high: '#ffffff', f_med: '#ff78a9', f_low: '#695f56', f_inv: '#ffffff', b_high: '#fff1e8', b_med: '#c2c3c7', b_low: '#83769c', b_inv: '#00aefe' });
         theme.install(document.body);
         theme.start();
         document.getElementById("input-area").focus();
