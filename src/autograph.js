@@ -7,11 +7,13 @@ class Autograph {
         this.updateTimer;
         this.content_check = "";
         this.is_edit = false;
+        
         this.input = document.getElementById("input-area");
         this.render = document.getElementById("render");
         this.filebar = document.getElementById("fname");
         this.statbar = document.getElementById("stat");
-        
+
+        this.render.style.display = "block";
         this.md = new Remarkable({
             breaks: true,
             typographer: true
@@ -33,10 +35,12 @@ class Autograph {
         if (this.render.style.display === "block") {
             this.render.style.display = "none";
             document.getElementById("editor").style.width = "100%";
+            this.input.style.width = "50%";
         }
         else {
             this.render.style.display = "block";
             document.getElementById("editor").style.width = "50%";
+            this.input.style.width = "100%";
         } 
     }
 
