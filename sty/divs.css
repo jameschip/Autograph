@@ -46,9 +46,6 @@ img {
 div {
     background-color: var(--background);
     color: var(--f_high) !important;
-    word-wrap: break-word;
-    margin:  0;
-    padding: 0;
 }
 
 #parent {
@@ -61,37 +58,43 @@ div {
 #top-bar {
     display: flex;
     flex-direction: row;
-    padding: 5px;
     border-bottom: 2px solid var(--b_med);
-    height: 20 px;
+    overflow: hidden;
+    font-weight: bold;
+    height: auto;
 }
 
 #fname {
+    margin: 5px !important;
     flex-grow: 9;
-    float: left;
+    overflow: hidden;
+    display: inline-block !important;
 }
 
 #stat {
+    margin: 5px !important;
     flex-grow: 1;
-    float: right;
     text-align: right;
+    overflow: hidden;
+    display: inline-block !important;
 }
 
 #editor {
     width: 50%;
-    height: calc(100% - 20px);
+    height: calc(100% - 30px);
     padding: 0px;
     margin: 0px;
     display: block;
     float: left;
     font-size: 1em;
+    flex: 1;
 }
 
 #render {
     width: auto;
-    height: calc(100% - 20px);
+    height: calc(100% - 30px);
     flex: 1;
-    padding: 10px;
+    padding: 0px;
     margin: 0px;
     overflow: scroll;
     font-size: 1em !important;

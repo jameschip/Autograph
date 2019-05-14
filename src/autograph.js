@@ -14,6 +14,7 @@ class Autograph {
         this.statbar = document.getElementById("stat");
 
         this.render.style.display = "block";
+
         this.md = new Remarkable({
             breaks: true,
             typographer: true

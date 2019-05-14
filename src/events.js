@@ -29,6 +29,7 @@ document.onkeydown = function keyDown(e) {
                 break;
             case 188:
                 autograph.gotoPrevHeading();
+                break;
         }
 
     }
