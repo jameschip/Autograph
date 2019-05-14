@@ -22,8 +22,7 @@ h4 {
     font-size: 2vw !important;
 }
 
-blockquote {
-    
+blockquote { 
     border-left: 2px solid var(--f_low);
     margin-left: 1.5em;
     padding-left: 0.5em;
