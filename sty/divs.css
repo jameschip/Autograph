@@ -38,6 +38,10 @@ pre, div wordwrap {
     /* IE */
 }
 
+pre {
+    border: 2px solid var(--b_low);
+}
+
 img {
     max-width: 100%;
     height: auto;
