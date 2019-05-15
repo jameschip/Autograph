@@ -6,7 +6,9 @@ class Autograph {
     constructor() {
         this.updateTimer;
         this.content_check = "";
-        this.is_edit = false;
+        this.has_edits = false;
+        this.is_dual = true;
+        this.single_editor = true;
 
         this.input = document.getElementById("input-area");
         this.render = document.getElementById("render");
@@ -24,24 +26,59 @@ class Autograph {
             this.updateTimer = setTimeout(() => {
                 this.render.innerHTML = this.md.render(this.input.value);
                 this.fillTopBar();
-                if (this.is_edit == false && this.input.value !== this.content_check) {
-                    this.is_edit = true;
+                if (this.has_edits == false && this.input.value !== this.content_check) {
+                    this.has_edits = true;
                     this.filebar.style.fontWeight = "bold";
                 }
             }, 200);
         };
+       
     }
 
-    toggleDisplay() {
-        if (this.render.style.display === "block") {
-            this.render.style.display = "none";
-            document.getElementById("editor").style.width = "100%";
-            this.input.style.width = "50%";
+    editorOnly() {
+        this.render.style.display = "none";
+        document.getElementById("editor").style.width = "100%";
+        this.input.style.width = "50%";
+        this.input.style.display = "block";
+        
+    }
+
+    renderOnly() {
+        this.render.style.display = "block";
+        this.render.style.width = "50%";
+        this.input.style.display = "none";
+        document.getElementById("editor").style.width = "25%";
+    }
+
+    dualDisplay() {
+        this.render.style.display = "block";
+        this.render.style.width = "auto";
+        document.getElementById("editor").style.width = "50%";
+        this.input.style.width = "100%";
+        this.input.style.display = "block";
+    }
+
+    toggleSingleDisplay() {
+        if (this.is_dual == false) {
+            this.single_editor = !this.single_editor;
+            this.setSingleDisplay();
         }
-        else {
-            this.render.style.display = "block";
-            document.getElementById("editor").style.width = "50%";
-            this.input.style.width = "100%";
+    }
+
+    setSingleDisplay() {
+        if (this.single_editor == true) {
+            this.editorOnly();
+        } else {
+            this.renderOnly();
+        }
+    }
+
+    toggleDualDisplay() {
+        this.is_dual = !this.is_dual;
+        if (this.is_dual == true) {
+            this.dualDisplay();
+        } else {
+            this.setSingleDisplay();
         } 
     }
 
@@ -109,14 +146,14 @@ class Autograph {
     }
 
     clearEditFlag() {
-        this.is_edit = false;
+        this.has_edits = false;
         this.content_check = this.input.value;
         this.filebar.style.fontWeight = "normal";
         this.fillTopBar();
     }
 
     hasEdits() {
-        return this.is_edit;
+        return this.has_edits;
     }
 
 }

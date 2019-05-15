@@ -2,6 +2,7 @@
 document.onkeydown = function keyDown(e) {
 
     if (e.keyCode === 9) {
+        autograph.toggleSingleDisplay();
         e.preventDefault();
     }
 
@@ -22,7 +23,7 @@ document.onkeydown = function keyDown(e) {
                 newFile();
                 break;
             case 68:
-                autograph.toggleDisplay();
+                autograph.toggleDualDisplay();
                 break;
             case 190:
                 autograph.gotoNextHeading();
