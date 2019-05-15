@@ -12,6 +12,7 @@
     "electron": "^4.1.4"
   },
   "dependencies": {
+    "npm": "^6.9.0",
     "remarkable": "^1.7.1"
   }
 }

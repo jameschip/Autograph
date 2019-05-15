@@ -47,7 +47,7 @@ class Autograph {
         this.render.style.display = "block";
         this.render.style.width = "50%";
         this.input.style.display = "none";
-        document.getElementById("editor").style.width = "25%";
+        document.getElementById("editor").style.width = "22.5%";
     }
 
     dualDisplay() {
