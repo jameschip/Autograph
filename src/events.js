@@ -22,6 +22,9 @@ document.onkeydown = function keyDown(e) {
             case 78:
                 newFile();
                 break;
+            case 69:
+                exportPDF()
+                break;
             case 68:
                 autograph.toggleDualDisplay();
                 break;

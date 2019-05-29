@@ -1,3 +1,4 @@
+var markdownpdf = require("markdown-pdf")
 const fs = require('fs');
 const { dialog } = require('electron').remote
 
@@ -43,6 +44,7 @@ function saveFile(f_name, content) {
 function openFile() {
     if (dealWithEdits()) {
         dialog.showOpenDialog({
+            title: "Open File",
             filters: [
                 { name: 'All Files', extensions: ['*'] },
                 { name: 'Markdown', extensions: ['md', 'markdown'] }]
@@ -56,7 +58,9 @@ function openFile() {
 }
 
 function saveFileAs() {
-    dialog.showSaveDialog((f_name) => {
+    dialog.showSaveDialog({
+        title: "Save maekdown"
+    },(f_name) => {
         if (f_name === undefined) {
             dialog.showErrorBox("Could not save file!")
         }
@@ -90,4 +94,15 @@ function dealWithEdits() {
         }
     }
     return true;
+}
+
+function exportPDF() {
+    doSaveFile()
+    dialog.showSaveDialog({
+        title: "Export to PDF"
+    }, (f_name) => {
+        markdownpdf().from(localStorage.getItem(aut_file)).to(f_name, function () {
+            console.log("Done")
+          })
+    })
 }
