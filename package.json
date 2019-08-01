@@ -9,11 +9,11 @@
   "author": "James Henderson",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^4.1.4"
+    "electron": "^4.2.8"
   },
   "dependencies": {
     "markdown-pdf": "^9.0.0",
-    "npm": "^6.9.0",
-    "remarkable": "^1.7.1"
+    "npm": "^6.10.2",
+    "remarkable": "^1.7.4"
   }
 }
