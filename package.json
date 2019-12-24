@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "markdown-pdf": "^9.0.0",
-    "npm": "^6.10.2",
+    "npm": "^6.13.4",
     "remarkable": "^1.7.4"
   }
 }
