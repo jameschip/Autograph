@@ -9,7 +9,7 @@
   "author": "James Henderson",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^4.2.8"
+    "electron": "^15.5.5"
   },
   "dependencies": {
     "markdown-pdf": "^9.0.0",
